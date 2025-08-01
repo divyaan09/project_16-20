@@ -1,24 +1,21 @@
 # 🌍 IP Tracker Tool (Java)
 
-A simple beginner-level Java project to track the **location**, **ISP**, **timezone**, and other information of any public IP address using a free public API. This is a basic Open Source Intelligence (OSINT) project ideal for cybersecurity learners.
+The **IP Tracker Tool** is a beginner-friendly Java project that demonstrates how to perform basic Open Source Intelligence (OSINT) operations using public APIs. This simple command-line application accepts any public IP address as input and displays detailed information such as location, ISP, timezone, city, and geographic coordinates using the free [ip-api.com](http://ip-api.com) service.
+
+This project is ideal for students, beginners in cybersecurity, or anyone learning how to work with APIs and JSON data in Java.
 
 ---
 
-## 🚀 Features
+## 📌 Features
 
-- 🌐 Fetches geographic location of any IP
-- 🛰️ Shows ISP, city, region, timezone, coordinates
-- 📡 Uses the free [ip-api.com](http://ip-api.com) service
-- 💡 Beginner-friendly: Simple code using `HttpURLConnection` and `org.json`
-- 📦 No authentication or API key needed
-
----
-
-## 🛠️ Technologies Used
-
-- Java (JDK 8+)
-- `org.json` (for JSON parsing)
-- Standard Java libraries (`HttpURLConnection`, `Scanner`)
+- 🔍 Fetches detailed IP address metadata:
+  - Country, region, city
+  - ZIP code, latitude, longitude
+  - ISP and timezone
+- 🌐 Uses public API from [ip-api.com](http://ip-api.com) (no API key required)
+- 📦 Parses JSON responses using `org.json` library
+- 💻 Command-line interface (easy to run and understand)
+- 🧰 Demonstrates basic OSINT and Java networking
 
 ---
 
@@ -41,28 +38,101 @@ Timezone: America/Los_Angeles
 
 ---
 
-## 📁 Project Structure
+## 🛠️ Technologies Used
+
+| Technology     | Purpose                        |
+|----------------|--------------------------------|
+| Java           | Core language                  |
+| HttpURLConnection | To make API calls         |
+| `org.json`     | To parse JSON API responses    |
+| Terminal/CLI   | Interface to input and output  |
+
+---
+
+## 📂 Project Structure
 
 ```
 IPTracker/
-│
-├── IPTracker.java         # Main Java source file
-└── README.md              # Project documentation
+├── IPTracker.java          # Main Java source file
+├── json-20240303.jar       # JSON library (dependency)
+└── README.md               # Project documentation
 ```
 
 ---
 
-## 📦 Setup Instructions
+## 📥 How to Run
 
-1. Download or clone this repository.
-2. Make sure you have Java installed (`java -version`).
-3. Add `org.json` library to your project:
-   - [Download from Maven](https://mvnrepository.com/artifact/org.json/json)
-4. Compile and run:
-   ```bash
-   javac -cp .;json-20250517.jar IPTracker.java
-   java -cp .;json-20250517.jar IPTracker
-   ```
+### ✅ 1. Prerequisites
+
+- Java JDK 8 or higher installed
+- `json-20240303.jar` file in the same folder (Download from [Maven Repo](https://mvnrepository.com/artifact/org.json/json))
+
+### ✅ 2. Compile the Code
+
+Open terminal in the project folder and run:
+
+#### On **Mac/Linux**:
+```bash
+javac -cp ".:json-20240303.jar" IPTracker.java
+```
+
+#### On **Windows**:
+```bash
+javac -cp ".;json-20240303.jar" IPTracker.java
+```
+
+### ✅ 3. Run the Program
+
+#### On **Mac/Linux**:
+```bash
+java -cp ".:json-20250517.jar" IPTracker
+```
+
+#### On **Windows**:
+```bash
+java -cp ".;json-20250517.jar" IPTracker
+```
 
 ---
-# project_16-20
+
+## 📌 API Information
+
+- **Base URL:** `http://ip-api.com/json/{IP}`
+- **Method:** GET
+- **Rate Limit:** 45 requests/min from same IP
+- **No API key or account required**
+
+For more info: [ip-api.com/docs](http://ip-api.com/docs)
+
+---
+
+## 🧠 What You Learn
+
+- Making HTTP requests in Java
+- Using third-party libraries (like `org.json`)
+- Parsing JSON data
+- Basics of OSINT and IP analysis
+- Working with APIs in a real-world context
+
+---
+
+## 📖 License
+
+This project is for **educational and personal use only**. Do not use it for unethical activities. Follow your local laws and API terms.
+
+---
+
+## 🙋‍♂️ Author
+
+**Divyanshu Raj**  
+Cybersecurity Intern | Java Developer | Tech Enthusiast
+
+[LinkedIn](https://www.linkedin.com/) | [GitHub](https://github.com/) *(replace with your links)*
+
+---
+
+## 💬 Feedback & Contribution
+
+Suggestions and contributions are welcome! Feel free to fork the project or raise issues to improve it.
+
+---
